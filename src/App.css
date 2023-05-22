@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  background-color: #121212;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 75px;
+  font-size: 24px;
+  background-color: #222;
+}
+
+.brands-list {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brands-list>li {
+  list-style: none;
+  cursor: pointer;
+  transition: scale 200ms;
+}
+
+
+.brands-list>li:hover {
+  scale: 1.1;
+}
+
+.samsung-logo,
+.oneplus-logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.apple-logo {
+  height: 42px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.google-logo {
+  height: 30px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.iqoo-logo {
+  height: 30px;
+  width: 70px;
+  object-fit: contain;
+}
