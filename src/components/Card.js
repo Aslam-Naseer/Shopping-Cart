@@ -1,10 +1,13 @@
 const Card = ({ brand, name, image, price }) => {
   return (
     <div className="card">
-      <div>{brand}</div>
-      <div>{name}</div>
       <img src={image} alt="phone" />
-      <div>{price}</div>
+      <div className="details">
+        <div>{brand}</div>
+        <div>{name}</div>
+        <div>Rs {price}</div>
+      </div>
+      <button className="add-to-cart">Add to cart</button>
     </div>
   );
 };
