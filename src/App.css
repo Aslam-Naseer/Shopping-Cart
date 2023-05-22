@@ -13,19 +13,33 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 25px 45px;
   align-items: center;
   gap: 75px;
   font-size: 24px;
   background-color: black;
   color: white;
-
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; */
 }
 
+.main-logo {
+  font-size: 42px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #46ffd3;
+}
+
+.selected {
+  max-height: 30px;
+  cursor: pointer;
+  transition: scale 250ms;
+}
+
+.selected:hover {
+  scale: 1.2;
+}
+
+/* 
 .brands-list {
   height: 100px;
   display: flex;
@@ -43,6 +57,7 @@ body {
 .brands-list>li:hover {
   scale: 1.1;
 }
+
 
 .samsung-logo,
 .oneplus-logo {
@@ -67,7 +82,7 @@ body {
   height: 30px;
   width: 70px;
   object-fit: contain;
-}
+}  */
 
 .phone-list {
   padding: 70px;
