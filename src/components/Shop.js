@@ -1,7 +1,7 @@
 import Card from "./Card";
 import phoneList from "../datas";
 
-const Home = () => {
+const Shop = () => {
   const phoneArray = [
     ...phoneList.Samsung,
     ...phoneList.Apple,
@@ -21,6 +21,4 @@ const Home = () => {
   return <div className="phone-list">{phoneDivs}</div>;
 };
 
-export default Home;
-
-//  name={phone.name} image={phone.image} price={phone.price}
+export default Shop;
