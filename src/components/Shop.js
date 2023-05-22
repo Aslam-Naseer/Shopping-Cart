@@ -14,7 +14,6 @@ const Shop = () => {
 
   const phoneDivs = [];
   phoneArray.forEach((phone) => {
-    console.log({ n: phone.name, p: phone.price });
     phoneDivs.push(<Card {...phone} />);
   });
 
