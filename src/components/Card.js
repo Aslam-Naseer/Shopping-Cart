@@ -1,8 +1,8 @@
 const Card = ({ brand, name, image, price, addToCart }) => {
-  const addPhoneToCart = (e) => {
+  const addPhoneToCart = () => {
     addToCart();
-    e.target.disabled = true;
   };
+
   return (
     <div className="card">
       <img src={image} alt="phone" />

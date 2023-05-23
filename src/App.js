@@ -15,14 +15,13 @@ function App() {
   const toggleShowMenu = () => setShowMenu(!showMenu);
   const toggleShowCart = () => setShowCart(!showCart);
 
-  const addToCart = (obj) => setInCart([...inCart, obj]);
+  const addToCart = (obj) => {
+    if (inCart.includes(obj)) return;
+    setInCart([...inCart, obj]);
+  };
+
   const removeFromCart = (obj) => {
     setInCart(inCart.filter((phone) => phone !== obj));
-    const elem = document.querySelector(
-      `[data-phone-id='${obj.brand} ${obj.name}']`
-    );
-    console.log(elem);
-    elem.disabled = false;
   };
 
   return (
@@ -34,7 +33,10 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+        <Route
+          path="/shop"
+          element={<Shop addToCart={addToCart} inCart={inCart} />}
+        />
       </Routes>
       <Menu show={showMenu} toggle={toggleShowMenu} />
       <Cart
