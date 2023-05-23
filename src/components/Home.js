@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import mobiles from "../images/Logos/mobiles_bg.png";
 
 const Home = () => {
@@ -6,7 +7,9 @@ const Home = () => {
       <div className="home-main">
         <div>ITS A CRAZY SEASON </div>
         <div>The right place for the right Smartphone!!</div>
-        <button className="shop-now">Shop Now</button>
+        <Link to="/shop">
+          <button className="shop-now">Shop Now</button>
+        </Link>
       </div>
       <img src={mobiles} alt="background" className="home-sec" />
     </div>

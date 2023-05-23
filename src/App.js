@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Menu from "./components/Menu";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,8 +32,10 @@ function App() {
         toggleShowCart={toggleShowCart}
         count={inCart.length}
       />
-      <Home />
-      <Shop addToCart={addToCart} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+      </Routes>
       <Menu show={showMenu} toggle={toggleShowMenu} />
       <Cart
         phoneList={inCart}

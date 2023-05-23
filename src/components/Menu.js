@@ -4,11 +4,14 @@ import google from "../images/Logos/google.png";
 import oneplus from "../images/Logos/oneplus.png";
 import iqoo from "../images/Logos/iqoo.png";
 import home from "../images/Logos/home.svg";
+import { Link } from "react-router-dom";
 
 const Menu = ({ show, toggle }) => {
   return (
     <div className={`menu ${show ? "show-menu" : ""}`}>
-      <img src={home} alt="home" className="home-logo" onClick={toggle} />
+      <Link to="/">
+        <img src={home} alt="home" className="home-logo" onClick={toggle} />
+      </Link>
       <ul className="brands-list">
         <li>
           <img
