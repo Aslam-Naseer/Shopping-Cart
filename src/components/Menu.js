@@ -8,7 +8,13 @@ import home from "../images/Logos/home.svg";
 const Menu = ({ show, toggle }) => {
   return (
     <div className={`menu ${show ? "show-menu" : ""}`}>
-      <img src={home} alt="home" className="home-logo" onClick={toggle} />
+      <img
+        src={home}
+        alt="home"
+        className="home-logo"
+        onClick={toggle}
+        data-brand="All"
+      />
       <ul className="brands-list">
         <li>
           <img
@@ -16,6 +22,7 @@ const Menu = ({ show, toggle }) => {
             alt="samsung"
             className="samsung-logo"
             onClick={toggle}
+            data-brand="Samsung"
           />
         </li>
         <li>
@@ -24,6 +31,7 @@ const Menu = ({ show, toggle }) => {
             alt="apple"
             className="apple-logo"
             onClick={toggle}
+            data-brand="Apple"
           />
         </li>
         <li>
@@ -32,6 +40,7 @@ const Menu = ({ show, toggle }) => {
             alt="oneplus"
             className="oneplus-logo"
             onClick={toggle}
+            data-brand="OnePlus"
           />
         </li>
         <li>
@@ -40,10 +49,17 @@ const Menu = ({ show, toggle }) => {
             alt="google"
             className="google-logo"
             onClick={toggle}
+            data-brand="Google"
           />
         </li>
         <li>
-          <img src={iqoo} alt="iqoo" className="iqoo-logo" onClick={toggle} />
+          <img
+            src={iqoo}
+            alt="iqoo"
+            className="iqoo-logo"
+            onClick={toggle}
+            data-brand="Iqoo"
+          />
         </li>
       </ul>
     </div>
