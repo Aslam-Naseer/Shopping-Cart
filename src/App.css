@@ -44,10 +44,10 @@ body {
   align-items: center;
   gap: 50px;
   justify-content: space-around;
-  background-color: black;
+  background-color: #222;
 
   position: fixed;
-  top: -50%;
+  top: -90px;
   left: 0;
   right: 0;
 
