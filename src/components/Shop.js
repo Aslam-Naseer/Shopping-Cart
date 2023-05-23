@@ -1,7 +1,7 @@
 import Card from "./Card";
 import phoneList from "../datas";
 
-const Shop = () => {
+const Shop = ({ addToCart }) => {
   const phoneArray = [
     ...phoneList.Samsung,
     ...phoneList.Apple,
@@ -14,7 +14,8 @@ const Shop = () => {
 
   const phoneDivs = [];
   phoneArray.forEach((phone) => {
-    phoneDivs.push(<Card {...phone} />);
+    const addPhone = () => addToCart(phone);
+    phoneDivs.push(<Card {...phone} addToCart={addPhone} />);
   });
 
   return <div className="phone-list">{phoneDivs}</div>;

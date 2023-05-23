@@ -11,12 +11,13 @@ function App() {
   const [inCart, setInCart] = useState([]);
 
   const toggleShowMenu = () => setShowMenu(!showMenu);
+  const addToCart = (obj) => setInCart([...inCart, obj]);
 
   return (
     <div className="App">
       <Header toggleShowMenu={toggleShowMenu} />
       <Home />
-      <Shop />
+      <Shop addToCart={addToCart} />
       <Menu show={showMenu} toggle={toggleShowMenu} />
       <Cart phoneList={inCart} />
     </div>
