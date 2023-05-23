@@ -14,39 +14,51 @@ const Menu = ({ show, toggle }) => {
       </Link>
       <ul className="brands-list">
         <li>
-          <img
-            src={samsung}
-            alt="samsung"
-            className="samsung-logo"
-            onClick={toggle}
-          />
+          <Link to="/shop/Samsung">
+            <img
+              src={samsung}
+              alt="samsung"
+              className="samsung-logo"
+              onClick={toggle}
+            />
+          </Link>
         </li>
         <li>
-          <img
-            src={apple}
-            alt="apple"
-            className="apple-logo"
-            onClick={toggle}
-          />
+          <Link to="/shop/Apple">
+            {" "}
+            <img
+              src={apple}
+              alt="apple"
+              className="apple-logo"
+              onClick={toggle}
+            />
+          </Link>
         </li>
         <li>
-          <img
-            src={oneplus}
-            alt="oneplus"
-            className="oneplus-logo"
-            onClick={toggle}
-          />
+          <Link to="/shop/OnePlus">
+            <img
+              src={oneplus}
+              alt="oneplus"
+              className="oneplus-logo"
+              onClick={toggle}
+            />
+          </Link>
         </li>
         <li>
-          <img
-            src={google}
-            alt="google"
-            className="google-logo"
-            onClick={toggle}
-          />
+          <Link to="/shop/Google">
+            <img
+              src={google}
+              alt="google"
+              className="google-logo"
+              onClick={toggle}
+            />
+          </Link>
         </li>
         <li>
-          <img src={iqoo} alt="iqoo" className="iqoo-logo" onClick={toggle} />
+          <Link to="/shop/Iqoo">
+            {" "}
+            <img src={iqoo} alt="iqoo" className="iqoo-logo" onClick={toggle} />
+          </Link>
         </li>
       </ul>
     </div>

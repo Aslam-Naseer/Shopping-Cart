@@ -36,7 +36,9 @@ function App() {
         <Route
           path="/shop"
           element={<Shop addToCart={addToCart} inCart={inCart} />}
-        />
+        >
+          <Route path=":brand" />
+        </Route>
       </Routes>
       <Menu show={showMenu} toggle={toggleShowMenu} />
       <Cart
