@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({ phoneList, removeFromCart }) => {
+const Cart = ({ phoneList, removeFromCart, toggle, show }) => {
   const [total, setTotal] = useState(0);
 
   const changeTotal = (price) => setTotal((t) => t + price);
@@ -19,13 +19,18 @@ const Cart = ({ phoneList, removeFromCart }) => {
   });
 
   return (
-    <div>
-      <div>Your Shopping Cart</div>
-      <div>{items}</div>
-      <div>Total: {total}</div>
-      <button>Checkout</button>
-      <button>Close</button>
-    </div>
+    <>
+      <div className={`overlay ${show ? "show-overlay" : ""}`}></div>
+      <div className={`cart ${show ? "show-cart" : ""}`}>
+        <div>Your Shopping Cart</div>
+        <ul>{items}</ul>
+        <div>Total: Rs {total}</div>
+        <button className="checkout">Checkout</button>
+        <button className="close" onClick={toggle}>
+          Close
+        </button>
+      </div>
+    </>
   );
 };
 

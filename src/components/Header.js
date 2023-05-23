@@ -1,11 +1,7 @@
-import apple from "../images/Logos/apple.png";
-import samsung from "../images/Logos/samsung.png";
-import google from "../images/Logos/google.png";
-import oneplus from "../images/Logos/oneplus.png";
-import iqoo from "../images/Logos/iqoo.png";
 import menu from "../images/Logos/menu.svg";
+import cart from "../images/Logos/cart.svg";
 
-const Header = ({ toggleShowMenu }) => {
+const Header = ({ toggleShowMenu, toggleShowCart }) => {
   const logo = menu;
 
   return (
@@ -17,7 +13,12 @@ const Header = ({ toggleShowMenu }) => {
         onClick={toggleShowMenu}
       />
       <div className="main-logo">SmartPhonez</div>
-      <div>View Cart</div>
+      <img
+        onClick={toggleShowCart}
+        src={cart}
+        alt="Veiw Cart"
+        className="cart-logo"
+      />
     </div>
   );
 };

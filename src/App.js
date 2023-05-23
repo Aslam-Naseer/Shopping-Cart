@@ -9,8 +9,11 @@ import Cart from "./components/Cart";
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [inCart, setInCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
   const toggleShowMenu = () => setShowMenu(!showMenu);
+  const toggleShowCart = () => setShowCart(!showCart);
+
   const addToCart = (obj) => setInCart([...inCart, obj]);
   const removeFromCart = (obj) => {
     setInCart(inCart.filter((phone) => phone !== obj));
@@ -23,11 +26,16 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggleShowMenu={toggleShowMenu} />
+      <Header toggleShowMenu={toggleShowMenu} toggleShowCart={toggleShowCart} />
       <Home />
       <Shop addToCart={addToCart} />
       <Menu show={showMenu} toggle={toggleShowMenu} />
-      <Cart phoneList={inCart} removeFromCart={removeFromCart} />
+      <Cart
+        phoneList={inCart}
+        removeFromCart={removeFromCart}
+        toggle={toggleShowCart}
+        show={showCart}
+      />
     </div>
   );
 }

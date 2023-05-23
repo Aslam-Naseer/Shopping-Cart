@@ -11,6 +11,10 @@ body {
   /* margin-top: 100px; */
 }
 
+button:active {
+  opacity: 0.85;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +39,14 @@ body {
   transition: scale 250ms;
 }
 
-.selected:hover {
+.cart-logo {
+  max-height: 45px;
+  cursor: pointer;
+  transition: scale 250ms;
+}
+
+.selected:hover,
+.cart-logo:hover {
   scale: 1.2;
 }
 
@@ -46,7 +57,7 @@ body {
   justify-content: space-around;
   background-color: #222;
 
-  position: fixed;
+  position: absolute;
   top: -90px;
   left: 0;
   right: 0;
@@ -221,4 +232,81 @@ body {
   border-radius: 10px;
   width: 450px;
   height: 240px;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -36vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 35vw;
+  font-family: 'Poppins', sans-serif;
+  transition: right 450ms ease-out;
+}
+
+.show-cart {
+  right: 0;
+}
+
+.cart>div {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.cart>div:nth-child(3) {
+  font-size: 26px;
+}
+
+.cart>ul {
+  max-height: 35vh;
+  width: 25vw;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.cart>button {
+  width: 20vw;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms;
+}
+
+.checkout {
+  background-color: #46ffd3;
+}
+
+.close {
+  background-color: #ff9999;
+}
+
+.checkout:hover {
+  background-color: #25ecbd;
+}
+
+.close:hover {
+  background-color: #e98a8a;
+}
+
+.overlay {
+  background-color: #0007;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 100vw;
+  transition: right 750ms ease-in-out;
+}
+
+.show-overlay {
+  right: 0;
 }
