@@ -14,7 +14,6 @@ const CartItem = ({
     changeTotal(price);
   };
   const decrement = () => {
-    // if (count < 1) return;
     if (count === 1) {
       removeFromCart();
       return;

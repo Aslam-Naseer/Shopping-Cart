@@ -16,7 +16,7 @@ const Shop = ({ addToCart, inCart }) => {
   const phoneArray = isArray(phoneList[brand])
     ? [...phoneList[brand]]
     : phoneListAll;
-  phoneArray.sort((a, b) => a.price - b.price);
+  phoneArray.sort((a, b) => b.price - a.price);
 
   const phoneDivs = [];
   phoneArray.forEach((phone) => {

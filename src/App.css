@@ -71,14 +71,14 @@ button:active {
   align-items: center;
   gap: 50px;
   justify-content: space-around;
-  background-color: #222;
+  background-color: #121212;
 
   position: absolute;
   top: -90px;
   left: 0;
   right: 0;
 
-  transition: top 350ms ease-in-out;
+  transition: top 350ms;
 }
 
 .show-menu {
@@ -254,7 +254,8 @@ button:active {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: -36vw;
+  right: -70%;
+  padding: 10px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -319,7 +320,7 @@ button:active {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 100vw;
+  right: 100%;
   transition: right 750ms ease-in;
 }
 

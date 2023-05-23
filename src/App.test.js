@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import App from "./App";
-import Menu from "./components/Menu";
 
 const phoneList = [
   { brand: "OnePlus", name: "11", price: 12345 },
