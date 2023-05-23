@@ -326,3 +326,41 @@ button:active {
 .show-overlay {
   right: 0;
 }
+
+
+.cart-item {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.cart-item>img {
+  align-self: center;
+  width: 90px;
+  height: 100px;
+  padding: 20px;
+}
+
+.cart-item>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.cart-item>div>div:first-child {
+  font-weight: 700;
+}
+
+.cart-item-buttons {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.cart-item-buttons>button {
+  font-size: 20px;
+  padding: 2px 8px;
+}

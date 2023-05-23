@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
-const CartItem = ({ brand, name, price, changeTotal, removeFromCart }) => {
+const CartItem = ({
+  image,
+  brand,
+  name,
+  price,
+  changeTotal,
+  removeFromCart,
+}) => {
   const [count, setCount] = useState(1);
   const increment = () => {
     setCount(count + 1);
@@ -26,16 +33,19 @@ const CartItem = ({ brand, name, price, changeTotal, removeFromCart }) => {
 
   return (
     <div className="cart-item">
-      <div>{brand + " " + name}</div>
-      <div>Rs: {price * count}</div>
+      <img src={image} alt="phone" />
       <div>
-        <button onClick={decrement} className="cart-item-btn">
-          -
-        </button>
-        {count}
-        <button onClick={increment} className="cart-item-btn">
-          +
-        </button>
+        <div>{brand + " " + name}</div>
+        <div>Rs: {price * count}</div>
+        <div className="cart-item-buttons">
+          <button onClick={decrement} className="cart-item-btn">
+            -
+          </button>
+          {count}
+          <button onClick={increment} className="cart-item-btn">
+            +
+          </button>
+        </div>
       </div>
     </div>
   );
