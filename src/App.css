@@ -42,12 +42,28 @@ button:active {
 .cart-logo {
   max-height: 45px;
   cursor: pointer;
-  transition: scale 250ms;
 }
 
 .selected:hover,
-.cart-logo:hover {
+.cart-logo-container:hover {
   scale: 1.2;
+}
+
+.cart-logo-container {
+  position: relative;
+  transition: scale 250ms;
+}
+
+.cart-count {
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #ff9999;
+  color: black;
 }
 
 .menu {
@@ -246,7 +262,7 @@ button:active {
   background-color: white;
   width: 35vw;
   font-family: 'Poppins', sans-serif;
-  transition: right 450ms ease-out;
+  transition: right 550ms ease-in;
 }
 
 .show-cart {
@@ -304,7 +320,7 @@ button:active {
   bottom: 0;
   left: 0;
   right: 100vw;
-  transition: right 750ms ease-in-out;
+  transition: right 750ms ease-in;
 }
 
 .show-overlay {

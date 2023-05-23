@@ -1,7 +1,7 @@
 import menu from "../images/Logos/menu.svg";
 import cart from "../images/Logos/cart.svg";
 
-const Header = ({ toggleShowMenu, toggleShowCart }) => {
+const Header = ({ toggleShowMenu, toggleShowCart, count }) => {
   const logo = menu;
 
   return (
@@ -13,12 +13,15 @@ const Header = ({ toggleShowMenu, toggleShowCart }) => {
         onClick={toggleShowMenu}
       />
       <div className="main-logo">SmartPhonez</div>
-      <img
-        onClick={toggleShowCart}
-        src={cart}
-        alt="Veiw Cart"
-        className="cart-logo"
-      />
+      <div className="cart-logo-container">
+        <img
+          onClick={toggleShowCart}
+          src={cart}
+          alt="Veiw Cart"
+          className="cart-logo"
+        />
+        <span className="cart-count">{count}</span>
+      </div>
     </div>
   );
 };

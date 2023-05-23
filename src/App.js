@@ -26,7 +26,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggleShowMenu={toggleShowMenu} toggleShowCart={toggleShowCart} />
+      <Header
+        toggleShowMenu={toggleShowMenu}
+        toggleShowCart={toggleShowCart}
+        count={inCart.length}
+      />
       <Home />
       <Shop addToCart={addToCart} />
       <Menu show={showMenu} toggle={toggleShowMenu} />
