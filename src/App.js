@@ -12,6 +12,14 @@ function App() {
 
   const toggleShowMenu = () => setShowMenu(!showMenu);
   const addToCart = (obj) => setInCart([...inCart, obj]);
+  const removeFromCart = (obj) => {
+    setInCart(inCart.filter((phone) => phone !== obj));
+    const elem = document.querySelector(
+      `[data-phone-id='${obj.brand} ${obj.name}']`
+    );
+    console.log(elem);
+    elem.disabled = false;
+  };
 
   return (
     <div className="App">
@@ -19,7 +27,7 @@ function App() {
       <Home />
       <Shop addToCart={addToCart} />
       <Menu show={showMenu} toggle={toggleShowMenu} />
-      <Cart phoneList={inCart} />
+      <Cart phoneList={inCart} removeFromCart={removeFromCart} />
     </div>
   );
 }

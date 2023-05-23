@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 
-const CartItem = ({ brand, name, price, changeTotal }) => {
+const CartItem = ({ brand, name, price, changeTotal, removeFromCart }) => {
   const [count, setCount] = useState(1);
   const increment = () => {
     setCount(count + 1);
     changeTotal(price);
   };
   const decrement = () => {
-    if (count < 1) return;
+    // if (count < 1) return;
+    if (count === 1) {
+      removeFromCart();
+      return;
+    }
     setCount(count - 1);
     changeTotal(price * -1);
   };

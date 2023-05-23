@@ -1,16 +1,18 @@
 import { useState } from "react";
 import CartItem from "./CartItem";
 
-const Cart = ({ phoneList }) => {
+const Cart = ({ phoneList, removeFromCart }) => {
   const [total, setTotal] = useState(0);
 
   const changeTotal = (price) => setTotal((t) => t + price);
   const items = [];
   phoneList.forEach((phone) => {
+    const remove = () => removeFromCart(phone);
     items.push(
       <CartItem
         {...phone}
         changeTotal={changeTotal}
+        removeFromCart={remove}
         key={phone.name + phone.price}
       />
     );
