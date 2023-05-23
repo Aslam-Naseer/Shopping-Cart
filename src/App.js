@@ -10,7 +10,6 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [inCart, setInCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
-  const [inShop, setInShop] = useState("All");
 
   const toggleShowMenu = () => setShowMenu(!showMenu);
   const toggleShowCart = () => setShowCart(!showCart);
@@ -25,13 +24,6 @@ function App() {
     elem.disabled = false;
   };
 
-  const showInShop = (e) => {
-    toggleShowMenu();
-    const value = e.target.dataset.brand;
-    console.log(value);
-    setInShop(value);
-  };
-
   return (
     <div className="App">
       <Header
@@ -39,9 +31,9 @@ function App() {
         toggleShowCart={toggleShowCart}
         count={inCart.length}
       />
-      <Shop addToCart={addToCart} selectedBrand={inShop} />
       <Home />
-      <Menu show={showMenu} toggle={showInShop} />
+      <Shop addToCart={addToCart} />
+      <Menu show={showMenu} toggle={toggleShowMenu} />
       <Cart
         phoneList={inCart}
         removeFromCart={removeFromCart}

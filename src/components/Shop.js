@@ -1,18 +1,16 @@
 import Card from "./Card";
 import phoneList from "../datas";
 
-const phoneListAll = [
-  ...phoneList.Samsung,
-  ...phoneList.Apple,
-  ...phoneList.Google,
-  ...phoneList.OnePlus,
-  ...phoneList.Iqoo,
-];
-const Shop = ({ addToCart, selectedBrand }) => {
-  const phoneArray =
-    selectedBrand === "All" ? phoneListAll : [...phoneList[selectedBrand]];
+const Shop = ({ addToCart }) => {
+  const phoneArray = [
+    ...phoneList.Samsung,
+    ...phoneList.Apple,
+    ...phoneList.Google,
+    ...phoneList.OnePlus,
+    ...phoneList.Iqoo,
+  ];
 
-  phoneArray.sort((a, b) => b.price - a.price);
+  phoneArray.sort((a, b) => a.price - b.price);
 
   const phoneDivs = [];
   phoneArray.forEach((phone) => {
