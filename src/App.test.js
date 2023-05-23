@@ -7,8 +7,8 @@ import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 
 const phoneList = [
-  { name: "OnePlus 11", price: 12345 },
-  { name: "Google Pixel 7 Pro", price: 23456 },
+  { brand: "OnePlus", name: "11", price: 12345 },
+  { brand: "Google", name: "Pixel 7 Pro", price: 23456 },
 ];
 
 jest.mock("./components/Card.js", () => ({ name }) => (

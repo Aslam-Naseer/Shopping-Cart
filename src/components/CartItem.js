@@ -1,10 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const CartItem = ({ brand, name, price }) => {
+const CartItem = ({ brand, name, price, changeTotal }) => {
   const [count, setCount] = useState(1);
+  const increment = () => {
+    setCount(count + 1);
+    changeTotal(price);
+  };
+  const decrement = () => {
+    if (count < 1) return;
+    setCount(count - 1);
+    changeTotal(price * -1);
+  };
 
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count > 0 ? count - 1 : 0);
+  useEffect(() => {
+    changeTotal(price);
+    return () => {
+      changeTotal(price * -1);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="cart-item">
